@@ -3,9 +3,9 @@
 @import "config";
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -16,21 +16,74 @@ body {
 
 img {
   border-radius: 50%;
+  height: 30em;
 }
 
 a {
   text-decoration: none;
 }
 
+// Bellow is where the bulk of the SCSS styling needs to be done
+
+// Take a look at the other files we've built already. How can they be useful here?
+
+// Also, take time to review the features of SCSS we've already covered:
+// 1. $variables
+// 2. nesting (dont forget about the ampersand (&) parent selector!)
+// 3. At-Rules
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
+  //here i am including the set-bg mixin. this makes the bg color the,
+  //$primary-color the background color of the hero div. as well as,
+  //using the text-color-picker function that i have called inside of the,
+  //set-bg mixin. Thats why even tho i have not specified a text color here,
+  //the text has changed its color to pink.
+  @include set-bg($primary-color);
+  padding-top: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 7em;
 
-  // Take a look at the other files we've built already. How can they be useful here?
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: dotted $light-color;
 
-  // Also, take time to review the features of SCSS we've already covered:
-  // 1. $variables
-  // 2. nesting (dont forget about the ampersand (&) parent selector!)
-  // 3. At-Rules
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 1em;
+    }
+
+    a {
+      //here im implimenting the text-color-picker function to the hyperlinks
+      color: text-color-picker($primary-color); 
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
+  }
+
+  //here im using the ampersand to reference .hero(the parent div) and adding -content so that,
+  //i can edit the hero-content div that is NESTED inside of the .hero div.
+  &-content {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+
+    img {
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-bottom: .5em;
+    }
+  }
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.

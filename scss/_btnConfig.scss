@@ -8,20 +8,27 @@
     padding: 8px 20px;
     margin: 3px;
 
-    &:hover {
-        transform: scale(.80);
+    &:hover { //the ampersand here is used to reference %btn
+        transform: scale(.80); //when the user hovers over the btn it changes shape
     }
     }
 
 
 
     .btn-primary {
+    //here @extend is used to inheret all the properties we,
+    //created above in %btn. That way we dont have to repeat code!
     @extend %btn;
+    //here @inlcude is being used to apply the mixin we made in _utilities,
+    //inside of this CSS rule. 
     @include set-bg(lighten($primary-color, 10%));
+    //here im changing the color of the text in the a tag
+    color: $light-color;
     }
 
     .btn-secondary {
     @extend %btn;
     @include set-bg($secondary-color);
+    color: $light-color;
     }
     

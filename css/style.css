@@ -16,13 +16,15 @@
 }
 
 .btn-primary {
-  background-color: #001c47;
-  color: white;
+  background-color: #fa91bc;
+  color: rgb(97, 16, 39) k;
+  color: #d40040;
 }
 
 .btn-secondary {
-  background-color: #a2d0fc;
-  color: black;
+  background-color: #afff9b;
+  color: rgb(97, 16, 39) k;
+  color: #d40040;
 }
 
 .box {
@@ -39,13 +41,14 @@
 }
 
 body {
-  background-color: #FFC300;
+  background-color: #d40040;
   font-family: Trebuchet MS, Arial, sans-serif;
   line-height: 1;
 }
 
 img {
   border-radius: 50%;
+  height: 30em;
 }
 
 a {
@@ -53,41 +56,43 @@ a {
 }
 
 .hero {
-  background-color: #000814;
-  color: white;
-  height: 600px;
+  background-color: #f8609f;
+  color: rgb(255, 199, 216);
+  padding-top: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 7em;
 }
 .hero nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: dotted #d40040;
 }
 .hero nav ul {
   display: flex;
   list-style-type: none;
 }
 .hero nav li {
-  padding: 15px;
+  padding: 1em;
 }
 .hero nav a {
-  color: white;
+  color: rgb(255, 199, 216);
 }
 .hero nav a:hover {
-  color: #a2d0fc;
+  color: #afff9b;
 }
 .hero-content {
-  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 30px;
+  margin-top: 1.5em;
 }
 .hero-content img {
-  width: 50%;
+  width: 100%;
 }
 .hero-content h1 {
   font-size: 50px;
-  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
 
 .m-1 {
